@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 1353556633}
   - component: {fileID: 1353556632}
   - component: {fileID: 1353556636}
+  - component: {fileID: 1353556637}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -492,12 +493,32 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353556631}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729038253d0e44448a05b41c36bd230e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  player: {fileID: 1299365890}
+  distanceToChase: 10
+  InFront: 0
+  distanceToAttack: 2
+  FOV: 60
+  speed: 1
+  strongerThanPlayer: 1
+  csCosFOV_2: 0
+--- !u!114 &1353556637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353556631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36770d62aa2010c42a7f23c4a5cc9aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   player: {fileID: 1299365890}
   distanceToChase: 10
   InFront: 0

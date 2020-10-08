@@ -61,12 +61,12 @@ public class SimpleFSM : MonoBehaviour
         //Vector3 directionToPlayer = playerHeading / distanceToPlayer;    // unit vector
         Vector3 directionToPlayer = playerHeading.normalized;    // unit vector
 
-        //InFront = (Vector3.Dot(this.transform.forward, directionToPlayer) > 0);
+        //InFront = (Vector3.Dot(this.transform.forward, directionToPlayer) > 0);   // Not using FOV, only InFront?
         float csFwd2Ply = Vector3.Dot(this.transform.forward, directionToPlayer);
         float angleFwd2Ply_in_RAD = Mathf.Acos(csFwd2Ply);
         float angleFwd2Ply_in_DEG = Rad2Deg(angleFwd2Ply_in_RAD);
 
-        InFront = (Vector3.Dot(this.transform.forward, directionToPlayer) >= csCosFOV_2);   // visible
+        InFront = (Vector3.Dot(this.transform.forward, directionToPlayer) >= csCosFOV_2);   // visible, using FOV
 
         if (InFront)
         {
@@ -87,7 +87,7 @@ public class SimpleFSM : MonoBehaviour
 
     void Chase()
     {
-        //Debug.Log("Chase");
+        Debug.Log("Chase");
 
         // New on Oct. 2nd
 
